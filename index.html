@@ -1,53 +1,187 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <title>Startseite</title>
-    <link rel="icon" href="" type="image/png">
-  </head>
-  <body>
-    <header>
-      <img src="" alt="Projekt Präsentation Icon">
-      <h1>Projektpräsentation (Die Wunderwaffen des zweiten Weltkriegs)</h1>
-    </header>
-    <h2>Artikel</h2>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projektpräsentation - Zweiter Weltkrieg</title>
+    <link rel="icon" href="icon.png" type="image/png">
+    <style>
+        :root {
+            --bg-color: #f4f4f7;
+            --card-bg: #ffffff;
+            --accent-color: #333;
+            --text-main: #333;
+            --text-muted: #666;
+            --link-color: #3498db;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: flex;
+        }
+
+        header img {
+            max-width: 80px;
+            margin-bottom: 1rem;
+            margin-right: 1rem;
+        }
+
+        h1 { margin: 0; font-size: 1.8rem; }
+        h2 { text-align: center; margin-top: 2rem; color: var(--accent-color); }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        article {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        article:hover {
+            transform: translateY(-5px);
+        }
+
+        article h3 { margin-top: 0; font-size: 15px;color: var(--accent-color); }
+
+        article img {
+            width: 150px;
+            height: 150px;
+            background: #eee; 
+            margin: 15px 0;
+            border: 1px solid #ddd;
+        }
+
+        article a {
+            font-size: 0.85rem;
+            color: var(--link-color);
+            text-decoration: none;
+            word-break: break-all;
+        }
+
+        article a:hover { text-decoration: underline; }
+
+        footer {
+            background: #e9ecef;
+            padding: 30px 20px;
+            margin-top: 50px;
+            text-align: center;
+            border-top: 1px solid #dee2e6;
+        }
+
+        footer p {
+            max-width: 700px;
+            margin: 0 auto 20px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        #mention {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        #mention div {
+            cursor: pointer;
+            background: white;
+            padding: 8px;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: opacity 0.2s;
+        }
+
+        #mention div:hover { opacity: 0.7; }
+        #mention img { width: 24px; height: 24px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="icon.png" alt="Icon">
+    <h1>Die Wunderwaffen des zweiten Weltkriegs</h1>
+</header>
+
+<h2>Artikelübersicht</h2>
+
+<main class="container">
     <article>
-      <h3>Die Schrecken des zweiten Weltkriegs</h3>
-      <img src="" alt="WWII QR-Code">
-      <a href="/article/wwii">https://cubxbuilder.github.io/project-presentation/article/wwii/</a>
+        <h3>Die Schrecken des zweiten Weltkriegs</h3>
+        <img src="/qr/wwiiqr.png" alt="QR-Code">
+        <a href="/article/wwii/">Zur Artikelseite</a>
     </article>
+
     <article>
-      <h3>Was ist eine Wunderwaffe?</h3>
-      <img src="" alt="Wunderwaffen1 QR-Code">
-      <a href="/article/superweapons">https://cubxbuilder.github.io/project-presentation/article/superweapons</a>
+        <h3>Was ist eine Wunderwaffe?</h3>
+        <img src="/qr/swqr.png" alt="QR-Code">
+        <a href="/article/superweapons/">Zur Artikelseite</a>
     </article>
+
     <article>
-      <h3>Was ist eine Wunderwaffe? 2</h3>
-      <img src="" alt="Wunderwaffen2 QR-Code">
-      <a href="/article/superweapons2">https://cubxbuilder.github.io/project-presentation/article/superweapons2</a>
+        <h3>Was ist eine Wunderwaffe? 2</h3>
+        <img src="/qr/swqr2.png" alt="QR-Code">
+        <a href="/article/superweapons2/">Zur Artikelseite</a>
     </article>
+
     <article>
-      <h3>Propaganda</h3>
-      <img src="" alt="Propaganda QR-Code">
-      <a href="/article/propaganda">https://cubxbuilder.github.io/project-presentation/article/propaganda</a>
+        <h3>Propaganda</h3>
+        <img src="/qr/propqr.png" alt="QR-Code">
+        <a href="/article/propaganda/">Zur Artikelseite</a>
     </article>
+
     <article>
-      <h3>Mythen des zweiten Weltkriegs</h3>
-      <img src="" alt="Mythen1 QR-Code">
-      <a href="/article/myths">https://cubxbuilder.github.io/project-presentation/article/myths</a>
+        <h3>Mythen des 2. Weltkriegs</h3>
+        <img src="/qr/mythsqr.png" alt="QR-Code">
+        <a href="/article/myths/">Zur Artikelseite</a>
     </article>
+
     <article>
-      <h3>Mythen des zweiten Weltkriegs 2</h3>
-      <img src="" alt="Mythen2 QR-Code">
-      <a href="/article/myths2">https://cubxbuilder.github.io/project-presentation/article/myths2</a>
+        <h3>Mythen des 2. Weltkriegs 2</h3>
+        <img src="/qr/mythsqr.png" alt="QR-Code">
+        <a href="/article/myths2/">Zur Artikelseite</a>
     </article>
-    <img src="https://rs-gauting.de/www/uploads/2023/11/cropped-rsg-Logo_Favicon-32x32.png" alt="RSGauting Icon">
-    <footer>
-      <p>Diese Seite wurde im Rahmen der Projektpräsentation der 9. Jahrgangsstufe an der Staatlichen Realschule Gauting programmiert um weitere Informationen über das erstellte Projekt zu vermitteln. Alle Rechte sind vorbehalten.</p>
-      <div id="mention">
-        <div id="rsgauting" onclick="window.location.href = 'https://rs-gauting.de'">
-          <img src="https://rs-gauting.de/www/uploads/2023/11/cropped-rsg-Logo_Favicon-32x32.png" alt="RSGauting Icon">
+</main>
+
+<footer>
+    <p>Diese Seite wurde im Rahmen der Projektpräsentation der 9. Jahrgangsstufe an der Staatlichen Realschule Gauting programmiert. Alle Rechte vorbehalten.</p>
+    <div id="mention">
+        <div id="rsgauting" onclick="window.location.href = 'https://rs-gauting.de'" title="RS Gauting">
+            <img src="https://rs-gauting.de/www/uploads/2023/11/cropped-rsg-Logo_Favicon-32x32.png" alt="RSG">
         </div>
-      </div>
-    </footer>
-  </body>
+        <div id="ProjectSourcer" onclick="window.location.href = 'https://lehradt.github.io/ProjectSourcer'" title="ProjectSourcer">
+            <img src="https://lehradt.github.io/ProjectSourcer/icon.png" alt="PS">
+        </div>
+    </div>
+</footer>
+
+</body>
 </html>
